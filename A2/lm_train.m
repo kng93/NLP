@@ -46,13 +46,29 @@ for iFile=1:length(DD)
   for l=1:length(lines)
 
     processedLine =  preprocess(lines{l}, language);
-    words = strsplit(' ', processedLine );
-   
-   for w=1:length(words)
-      
-    % TODO: THE STUDENT IMPLEMENTS THE FOLLOWING
+    words = strsplit( processedLine );
 
-    % TODO: THE STUDENT IMPLEMENTED THE PRECEDING
+    % Iterate over the words
+    for w=1:length(words)
+      % Make into string and check if empty
+      word = strtrim(words{w});
+      
+      % Counts the uni words
+      if ~isempty(word)
+        % If the word exists, add to count
+        if isfield(LM.uni, word)
+          LM.uni.(word) = LM.uni.(word) + 1;
+        % If word not yet in struct, initialize!
+        else
+          LM.uni.(word) = 1;
+        end
+      end
+  
+      % TODO: Counts the bi words
+
+
+    
+     end
   end
 end
 
