@@ -45,7 +45,32 @@ function logProb = lm_prob(sentence, LM, type, delta, vocabSize)
   end
 
   words = strsplit(sentence);
+ 
+  % Initialize first word to be 'null' (consistent with lm_train); should always be followd by SENTSTART 
+  prevWord = 'null'
+  total_prob = 1;
 
-  % TODO: the student implements the following
-  % TODO: once upon a time there was a curmudgeonly orangutan named Jub-Jub.
+  % Calculating the MLE estimate
+  for w=1:length(words)
+    word = strtrim(words{w});
+    prob = 0;
+ 
+    % If word isn't in training for uni set, leave logProb = -inf (because won't be in bi set)
+    if isfield(LM.uni, word)
+      uni_wcount = LM.uni.(word) + delta; % If not smooth, delta = 0 so has no effect
+      bi_wcount = 0 + (delta * vocabSize); % Default until found
+      % Get the bi count
+      if isfield(LM.bi, prevWord) && isfield(LM.bi.(prevWord), word)
+        bi_wcount = LM.bi.(prevWord).(word) + (delta * vocabSize);
+      end
+         
+      % Get the probability for current word
+      prob = bi_wcount / uni_wcount;
+    end
+    total_prob = total_prob * prob;
+  end
+  logProb = log2(total_prob);
+
+  % TODO: Test!!!
+
 return

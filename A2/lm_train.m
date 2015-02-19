@@ -27,8 +27,6 @@ function LM = lm_train(dataDir, language, fn_LM)
 % Template (c) 2011 Frank Rudzicz
 
 % TODO: Clean up
-% TODO: TEST MORE
-% TODO: deal with long words....
 
 global CSC401_A2_DEFNS
 
@@ -51,7 +49,7 @@ for iFile=1:length(DD)
 
     processedLine =  preprocess(lines{l}, language);
     words = strsplit( processedLine );
-    prevWord = ''; % Every new line, the previous word is initialized again
+    prevWord = 'null'; % Every new line, the previous word is initialized again
 
     % Iterate over the words
     for w=1:length(words)
@@ -66,17 +64,15 @@ for iFile=1:length(DD)
           LM.uni.(word) = 1;
         end
   
-        % Counts the bi words; ignores if prevWord is not set yet
-        if ~isempty(prevWord)
-          if isfield(LM.bi, prevWord)
-            if isfield(LM.bi.(prevWord), word)
-              LM.bi.(prevWord).(word) = LM.bi.(prevWord).(word) + 1;
-            else
-              LM.bi.(prevWord).(word) = 1;
-            end
+        % Counts the bi words; puts null for previous word if first word
+        if isfield(LM.bi, prevWord)
+          if isfield(LM.bi.(prevWord), word)
+            LM.bi.(prevWord).(word) = LM.bi.(prevWord).(word) + 1;
           else
             LM.bi.(prevWord).(word) = 1;
           end
+        else
+          LM.bi.(prevWord).(word) = 1;
         end
       end
 
