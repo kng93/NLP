@@ -29,8 +29,8 @@ function outSentence = preprocess( inSentence, language )
   outSentence = inSentence;
 
   % perform language-agnostic changes
-  % Separate final punctuation (end of sentence)
-  outSentence = regexprep( outSentence, '(.+?)([\.\?\!\:\;\-]+)(\s*)(SENTEND|$|\\n)', '$1 $2 $4');
+  % Separate final punctuation (end of sentence), as well as single quotation
+  outSentence = regexprep( outSentence, '(.+?)([\.\?\!\:\;\-\'']+)(\s*)(SENTEND|$|\\n)', '$1 $2 $4');
   % Seperate commas, colons, semi-colons, parentheses
   outSentence = regexprep( outSentence, '([^\s]+?)(\s*)([\,\:\;\(\)])(\s*)', '$1 $3 ');
   % Separate dashes between parentheses -
@@ -41,7 +41,8 @@ function outSentence = preprocess( inSentence, language )
   outSentence = regexprep( outSentence, '([\d]+?)(\s*)([\+|\-|\>|\<|=])(\s*)', '$1 $3 ');
   outSentence = regexprep( outSentence, '(\s*)([\+|\-|\>|\<|=])(\s*)([\d]+?)', ' $2 $4');
   % Separate quotation marks
-  outSentence = regexprep( outSentence, '(\s*)(\")(\s*)' ,' $2 '); 
+  outSentence = regexprep( outSentence, '(\s*)([\"\`])(\s*)' ,' $2 ');
+  outSentence = regexprep( outSentence, '(\s+|^)(\'')(\w+)', '$1$2 $3'); % Single quotation at beginning of word
 
   switch language
    case 'e'
@@ -65,3 +66,5 @@ function outSentence = preprocess( inSentence, language )
   % change unpleasant characters to codes that can be keys in dictionaries
   outSentence = convertSymbols( outSentence );
 
+  % Ensure no token is more than 63 characters
+  outSentence = regexprep( outSentence, '([\w\_]{60})([\w_]{4})([\w_]*)', 'XXX$1');
