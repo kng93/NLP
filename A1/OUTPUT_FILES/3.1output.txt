@@ -1,0 +1,507 @@
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: ak, bo
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -1.4122 * (normalized) fppronouns
+ +       0.0294 * (normalized) sppronouns
+ +      -0.184  * (normalized) tppronouns
+ +       1.94   * (normalized) coordconjs
+ +      -0.7611 * (normalized) ptverbs
+ +       1.1921 * (normalized) ftverbs
+ +       8.3902 * (normalized) commas
+ +       7.5367 * (normalized) colons
+ +      -4.3137 * (normalized) dashes
+ +      -0.404  * (normalized) parentheses
+ +      -3.2571 * (normalized) ellipses
+ +      -1.2011 * (normalized) cmnnouns
+ +      10.2161 * (normalized) propnouns
+ +      -1.1262 * (normalized) adverbs
+ +       0.5659 * (normalized) whwords
+ +      -4.8497 * (normalized) slang
+ +      -6.0986 * (normalized) uppercase
+ +       3.5342 * (normalized) avgsentence
+ +       4.0603 * (normalized) avgtoken
+ +       3.8575 * (normalized) numsentence
+ -       1.9526
+
+Number of kernel evaluations: 574760 (67.078% cached)
+
+Classifier for classes: ak, kk
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         3.0413 * (normalized) fppronouns
+ +      -0.4806 * (normalized) sppronouns
+ +       0.4592 * (normalized) tppronouns
+ +       2.5417 * (normalized) coordconjs
+ +      -0.0778 * (normalized) ptverbs
+ +       0.6953 * (normalized) ftverbs
+ +      -1.7832 * (normalized) commas
+ +      -8.6712 * (normalized) colons
+ +      -2.1722 * (normalized) dashes
+ +      -2.9112 * (normalized) parentheses
+ +      -1.3848 * (normalized) ellipses
+ +       2.1556 * (normalized) cmnnouns
+ +       3.6009 * (normalized) propnouns
+ +       1.5079 * (normalized) adverbs
+ +      -0.1217 * (normalized) whwords
+ +       6.227  * (normalized) slang
+ +       1.8055 * (normalized) uppercase
+ +      -2.3744 * (normalized) avgsentence
+ +       2.2629 * (normalized) avgtoken
+ +       3.7149 * (normalized) numsentence
+ -       1.0694
+
+Number of kernel evaluations: 803077 (68.513% cached)
+
+Classifier for classes: ak, nt
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -2.922  * (normalized) fppronouns
+ +      -1.5963 * (normalized) sppronouns
+ +      -0.2069 * (normalized) tppronouns
+ +       0.6189 * (normalized) coordconjs
+ +       0.8473 * (normalized) ptverbs
+ +      -0.5095 * (normalized) ftverbs
+ +       9.6444 * (normalized) commas
+ +      -0.3791 * (normalized) colons
+ +      -0.4792 * (normalized) dashes
+ +       0.9095 * (normalized) parentheses
+ +      -3      * (normalized) ellipses
+ +       1.609  * (normalized) cmnnouns
+ +       7.2006 * (normalized) propnouns
+ +       2.973  * (normalized) adverbs
+ +       1.0071 * (normalized) whwords
+ +      -2.4483 * (normalized) slang
+ +      -7.8233 * (normalized) uppercase
+ +       2.1345 * (normalized) avgsentence
+ +       4.5572 * (normalized) avgtoken
+ +       5.9705 * (normalized) numsentence
+ -       2.1945
+
+Number of kernel evaluations: 610174 (64.566% cached)
+
+Classifier for classes: ak, sc
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         1.2119 * (normalized) fppronouns
+ +      -0.9765 * (normalized) sppronouns
+ +       2.8843 * (normalized) tppronouns
+ +      -1.2126 * (normalized) coordconjs
+ +       1.4106 * (normalized) ptverbs
+ +       0.1531 * (normalized) ftverbs
+ +       9.6477 * (normalized) commas
+ +      -6.3445 * (normalized) colons
+ +      -0.6095 * (normalized) dashes
+ +      -1.13   * (normalized) parentheses
+ +      -3.6889 * (normalized) ellipses
+ +       1.6615 * (normalized) cmnnouns
+ +       0.0873 * (normalized) propnouns
+ +       3.3265 * (normalized) adverbs
+ +       0.2037 * (normalized) whwords
+ +      -2.4428 * (normalized) slang
+ +      -6.5741 * (normalized) uppercase
+ +       1.7423 * (normalized) avgsentence
+ +       1.9391 * (normalized) avgtoken
+ +       2.4524 * (normalized) numsentence
+ -       1.8593
+
+Number of kernel evaluations: 552175 (68.282% cached)
+
+Classifier for classes: ak, sha
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -1.7992 * (normalized) fppronouns
+ +      -1.5947 * (normalized) sppronouns
+ +      -0.2385 * (normalized) tppronouns
+ +      -1.9079 * (normalized) coordconjs
+ +       0.2599 * (normalized) ptverbs
+ +      -0.5698 * (normalized) ftverbs
+ +       1.8799 * (normalized) commas
+ +      -7.2774 * (normalized) colons
+ +       5.4083 * (normalized) dashes
+ +      -0.9742 * (normalized) parentheses
+ +       1.008  * (normalized) ellipses
+ +       3.9708 * (normalized) cmnnouns
+ +       3.0103 * (normalized) propnouns
+ +      -0.9302 * (normalized) adverbs
+ +      -0.7191 * (normalized) whwords
+ +      -0.7323 * (normalized) slang
+ +       1.9606 * (normalized) uppercase
+ +       0.0683 * (normalized) avgsentence
+ +       0.8474 * (normalized) avgtoken
+ +      -0.8887 * (normalized) numsentence
+ -       1.5779
+
+Number of kernel evaluations: 321624 (68.809% cached)
+
+Classifier for classes: bo, kk
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         3.1398 * (normalized) fppronouns
+ +      -0.5724 * (normalized) sppronouns
+ +       0.4936 * (normalized) tppronouns
+ +       0.6003 * (normalized) coordconjs
+ +       0.8772 * (normalized) ptverbs
+ +      -0.4613 * (normalized) ftverbs
+ +      -8.343  * (normalized) commas
+ +     -11.7939 * (normalized) colons
+ +       1.6067 * (normalized) dashes
+ +      -0.4167 * (normalized) parentheses
+ +       3.861  * (normalized) ellipses
+ +       2.1212 * (normalized) cmnnouns
+ +      -5.4932 * (normalized) propnouns
+ +       1.7896 * (normalized) adverbs
+ +      -0.8373 * (normalized) whwords
+ +       6.7136 * (normalized) slang
+ +       4.4412 * (normalized) uppercase
+ +      -5.4294 * (normalized) avgsentence
+ +      -1.9384 * (normalized) avgtoken
+ +      -2.6553 * (normalized) numsentence
+ +       1.4689
+
+Number of kernel evaluations: 552033 (65.47% cached)
+
+Classifier for classes: bo, nt
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -2.1127 * (normalized) fppronouns
+ +      -1.5167 * (normalized) sppronouns
+ +      -0.6705 * (normalized) tppronouns
+ +      -2.5399 * (normalized) coordconjs
+ +       1.6127 * (normalized) ptverbs
+ +      -1.8977 * (normalized) ftverbs
+ +       2.6343 * (normalized) commas
+ +      -6.5641 * (normalized) colons
+ +       4.4365 * (normalized) dashes
+ +      -1.2688 * (normalized) parentheses
+ +       3.2    * (normalized) ellipses
+ +       3.0728 * (normalized) cmnnouns
+ +      -2.9296 * (normalized) propnouns
+ +       4.7134 * (normalized) adverbs
+ +       0.506  * (normalized) whwords
+ +       2.7517 * (normalized) slang
+ +      -2.0561 * (normalized) uppercase
+ +      -0.4742 * (normalized) avgsentence
+ +       0.2624 * (normalized) avgtoken
+ +       5.2473 * (normalized) numsentence
+ -       0.9122
+
+Number of kernel evaluations: 329880 (68.765% cached)
+
+Classifier for classes: bo, sc
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         2.1    * (normalized) fppronouns
+ +      -0.4272 * (normalized) sppronouns
+ +       3.2681 * (normalized) tppronouns
+ +      -3.0086 * (normalized) coordconjs
+ +       1.808  * (normalized) ptverbs
+ +      -1.0505 * (normalized) ftverbs
+ +       0.518  * (normalized) commas
+ +     -13.4628 * (normalized) colons
+ +       2.0195 * (normalized) dashes
+ +      -0.294  * (normalized) parentheses
+ +       0.9303 * (normalized) ellipses
+ +       1.0493 * (normalized) cmnnouns
+ +      -8.549  * (normalized) propnouns
+ +       3.1179 * (normalized) adverbs
+ +      -0.3747 * (normalized) whwords
+ +       2      * (normalized) slang
+ +      -4.1878 * (normalized) uppercase
+ +      -2.0861 * (normalized) avgsentence
+ +      -2.6845 * (normalized) avgtoken
+ +      -2.222  * (normalized) numsentence
+ +       0.8882
+
+Number of kernel evaluations: 439307 (65.411% cached)
+
+Classifier for classes: bo, sha
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.9853 * (normalized) fppronouns
+ +      -1.5577 * (normalized) sppronouns
+ +      -0.8644 * (normalized) tppronouns
+ +      -2.6742 * (normalized) coordconjs
+ +       0.439  * (normalized) ptverbs
+ +      -0.8944 * (normalized) ftverbs
+ +      -2.883  * (normalized) commas
+ +      -8.1474 * (normalized) colons
+ +       6.8161 * (normalized) dashes
+ +      -0.75   * (normalized) parentheses
+ +       6.0046 * (normalized) ellipses
+ +       5.2068 * (normalized) cmnnouns
+ +      -1.4308 * (normalized) propnouns
+ +      -0.4125 * (normalized) adverbs
+ +      -0.7563 * (normalized) whwords
+ +       4.0277 * (normalized) slang
+ +       3.5834 * (normalized) uppercase
+ +      -2.4138 * (normalized) avgsentence
+ +      -1.0761 * (normalized) avgtoken
+ +      -3.7452 * (normalized) numsentence
+ -       0.3972
+
+Number of kernel evaluations: 235230 (68.017% cached)
+
+Classifier for classes: kk, nt
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -4.9485 * (normalized) fppronouns
+ +      -0.8597 * (normalized) sppronouns
+ +      -0.8326 * (normalized) tppronouns
+ +      -2.0936 * (normalized) coordconjs
+ +       0.4525 * (normalized) ptverbs
+ +      -1.0956 * (normalized) ftverbs
+ +       9.6955 * (normalized) commas
+ +       5.2891 * (normalized) colons
+ +       2.3768 * (normalized) dashes
+ +       3.9471 * (normalized) parentheses
+ +      -2.8639 * (normalized) ellipses
+ +       0.45   * (normalized) cmnnouns
+ +       3.7556 * (normalized) propnouns
+ +       1.151  * (normalized) adverbs
+ +       1.3486 * (normalized) whwords
+ +      -5.9777 * (normalized) slang
+ +      -7.7033 * (normalized) uppercase
+ +       4.6925 * (normalized) avgsentence
+ +       2.8197 * (normalized) avgtoken
+ +       4.1732 * (normalized) numsentence
+ -       1.7373
+
+Number of kernel evaluations: 502278 (65.862% cached)
+
+Classifier for classes: kk, sc
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -1.3215 * (normalized) fppronouns
+ +      -0.2553 * (normalized) sppronouns
+ +       2.0028 * (normalized) tppronouns
+ +      -4.7694 * (normalized) coordconjs
+ +       0.9758 * (normalized) ptverbs
+ +      -0.8921 * (normalized) ftverbs
+ +      10.4162 * (normalized) commas
+ +      -0.0695 * (normalized) colons
+ +       1.3767 * (normalized) dashes
+ +       2.5549 * (normalized) parentheses
+ +      -2.0788 * (normalized) ellipses
+ +       0.0433 * (normalized) cmnnouns
+ +      -3.4903 * (normalized) propnouns
+ +       1.1918 * (normalized) adverbs
+ +       0.3937 * (normalized) whwords
+ +      -5.6369 * (normalized) slang
+ +      -9.1329 * (normalized) uppercase
+ +       5.2932 * (normalized) avgsentence
+ +       0.5725 * (normalized) avgtoken
+ +       1.5996 * (normalized) numsentence
+ -       1.5373
+
+Number of kernel evaluations: 608190 (68.074% cached)
+
+Classifier for classes: kk, sha
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -3.3589 * (normalized) fppronouns
+ +      -1.682  * (normalized) sppronouns
+ +      -0.8074 * (normalized) tppronouns
+ +      -3.4288 * (normalized) coordconjs
+ +      -0.3153 * (normalized) ptverbs
+ +      -0.861  * (normalized) ftverbs
+ +       3.4374 * (normalized) commas
+ +      -2.2177 * (normalized) colons
+ +       6.6401 * (normalized) dashes
+ +       2.9704 * (normalized) parentheses
+ +       2.3983 * (normalized) ellipses
+ +       3.5717 * (normalized) cmnnouns
+ +       2.0216 * (normalized) propnouns
+ +      -2.2143 * (normalized) adverbs
+ +      -0.5926 * (normalized) whwords
+ +      -2.3658 * (normalized) slang
+ +      -0.3066 * (normalized) uppercase
+ +       1.5629 * (normalized) avgsentence
+ +      -0.2725 * (normalized) avgtoken
+ +      -1.319  * (normalized) numsentence
+ -       1.4261
+
+Number of kernel evaluations: 265276 (67.713% cached)
+
+Classifier for classes: nt, sc
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         4.9092 * (normalized) fppronouns
+ +       1.3961 * (normalized) sppronouns
+ +       4.6159 * (normalized) tppronouns
+ +      -1.5857 * (normalized) coordconjs
+ +       0.7423 * (normalized) ptverbs
+ +       0.8051 * (normalized) ftverbs
+ +      -2.4878 * (normalized) commas
+ +      -5.9895 * (normalized) colons
+ +      -1.6368 * (normalized) dashes
+ +      -2.1667 * (normalized) parentheses
+ +       0.1617 * (normalized) ellipses
+ +      -1.2732 * (normalized) cmnnouns
+ +      -6.8119 * (normalized) propnouns
+ +      -0.7515 * (normalized) adverbs
+ +      -1.028  * (normalized) whwords
+ +       0.6718 * (normalized) slang
+ +      -2.5654 * (normalized) uppercase
+ +      -0.6532 * (normalized) avgsentence
+ +      -3.4766 * (normalized) avgtoken
+ +      -4.8525 * (normalized) numsentence
+ +       0.9246
+
+Number of kernel evaluations: 333304 (65.854% cached)
+
+Classifier for classes: nt, sha
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.216  * (normalized) fppronouns
+ +      -0.5128 * (normalized) sppronouns
+ +      -0.3343 * (normalized) tppronouns
+ +      -2.1471 * (normalized) coordconjs
+ +      -0.6    * (normalized) ptverbs
+ +      -0.6643 * (normalized) ftverbs
+ +      -3.7059 * (normalized) commas
+ +      -5.2486 * (normalized) colons
+ +       4.9796 * (normalized) dashes
+ +      -0.8798 * (normalized) parentheses
+ +       5.4694 * (normalized) ellipses
+ +       3.0761 * (normalized) cmnnouns
+ +      -0.6797 * (normalized) propnouns
+ +      -2.6726 * (normalized) adverbs
+ +      -1.0676 * (normalized) whwords
+ +       1.4878 * (normalized) slang
+ +       6.244  * (normalized) uppercase
+ +      -1.9089 * (normalized) avgsentence
+ +      -1.6955 * (normalized) avgtoken
+ +      -6.1165 * (normalized) numsentence
+ -       0.0026
+
+Number of kernel evaluations: 166009 (65.791% cached)
+
+Classifier for classes: sc, sha
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -2.9466 * (normalized) fppronouns
+ +      -1.8958 * (normalized) sppronouns
+ +      -2.7107 * (normalized) tppronouns
+ +      -1.2037 * (normalized) coordconjs
+ +      -1.0457 * (normalized) ptverbs
+ +      -1.0537 * (normalized) ftverbs
+ +      -1.7508 * (normalized) commas
+ +      -1.6868 * (normalized) colons
+ +       5.4147 * (normalized) dashes
+ +       1.3333 * (normalized) parentheses
+ +       4.8    * (normalized) ellipses
+ +       4.0658 * (normalized) cmnnouns
+ +       4.6586 * (normalized) propnouns
+ +      -2.7127 * (normalized) adverbs
+ +      -0.6449 * (normalized) whwords
+ +       1.0037 * (normalized) slang
+ +       8.0212 * (normalized) uppercase
+ +      -1.7086 * (normalized) avgsentence
+ +      -0.6853 * (normalized) avgtoken
+ +      -3.1582 * (normalized) numsentence
+ -       0.4456
+
+Number of kernel evaluations: 126107 (66.726% cached)
+
+
+
+Time taken to build model: 3.87 seconds
+Time taken to test model on training data: 0.24 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        6763               50.7847 %
+Incorrectly Classified Instances      6554               49.2153 %
+Kappa statistic                          0.3899
+Mean absolute error                      0.2443
+Root mean squared error                  0.3439
+Relative absolute error                 89.9188 %
+Root relative squared error             93.3053 %
+Total Number of Instances            13317     
+
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f   <-- classified as
+ 1999  254  422  184  198  122 |    a = ak
+  399 1076  127  234  154   25 |    b = bo
+  960  120 1741  142  145   28 |    c = kk
+  344  457  182  750  228   77 |    d = nt
+  469  170  303  211  676   28 |    e = sc
+  281   69   87  103   31  521 |    f = sha
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        6715               50.4243 %
+Incorrectly Classified Instances      6602               49.5757 %
+Kappa statistic                          0.3852
+Mean absolute error                      0.2446
+Root mean squared error                  0.3443
+Relative absolute error                 90.0145 %
+Root relative squared error             93.4076 %
+Total Number of Instances            13317     
+
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f   <-- classified as
+ 1986  253  432  186  201  121 |    a = ak
+  404 1064  130  238  153   26 |    b = bo
+  964  120 1740  141  143   28 |    c = kk
+  348  454  189  738  231   78 |    d = nt
+  481  171  295  208  674   28 |    e = sc
+  285   71   83  107   33  513 |    f = sha
+

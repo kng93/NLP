@@ -1,0 +1,506 @@
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: britneyspears, justinbieber
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.4783 * (normalized) fppronouns
+ +      -0.8735 * (normalized) sppronouns
+ +       0.246  * (normalized) tppronouns
+ +       0.9603 * (normalized) coordconjs
+ +      -0.4116 * (normalized) ptverbs
+ +       0.7162 * (normalized) ftverbs
+ +      -0.9401 * (normalized) commas
+ +       0.2185 * (normalized) colons
+ +      -1.3138 * (normalized) dashes
+ +      -1.4418 * (normalized) parentheses
+ +      -0.2217 * (normalized) ellipses
+ +      -1.3297 * (normalized) cmnnouns
+ +      -6.3736 * (normalized) propnouns
+ +      -0.2226 * (normalized) adverbs
+ +       0.3069 * (normalized) whwords
+ +       0.3024 * (normalized) slang
+ +       3.1336 * (normalized) uppercase
+ +       0.0072 * (normalized) avgsentence
+ +       2.3199 * (normalized) avgtoken
+ +      -0.438  * (normalized) numsentence
+ +       1.0511
+
+Number of kernel evaluations: 692619 (70.018% cached)
+
+Classifier for classes: britneyspears, katyperry
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.9185 * (normalized) fppronouns
+ +      -0.8884 * (normalized) sppronouns
+ +       0.2835 * (normalized) tppronouns
+ +       0.4043 * (normalized) coordconjs
+ +      -0.5102 * (normalized) ptverbs
+ +       0.1098 * (normalized) ftverbs
+ +       0.8287 * (normalized) commas
+ +       1.0575 * (normalized) colons
+ +      -7.1864 * (normalized) dashes
+ +      -1.707  * (normalized) parentheses
+ +       1.1996 * (normalized) ellipses
+ +       0.0093 * (normalized) cmnnouns
+ +      -2.923  * (normalized) propnouns
+ +      -0.0755 * (normalized) adverbs
+ +       0.5119 * (normalized) whwords
+ +       0.5125 * (normalized) slang
+ +       3.0922 * (normalized) uppercase
+ +      -0.4794 * (normalized) avgsentence
+ +       0.4679 * (normalized) avgtoken
+ +      -0.6729 * (normalized) numsentence
+ +       0.9625
+
+Number of kernel evaluations: 590142 (72.87% cached)
+
+Classifier for classes: britneyspears, ladygaga
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         3.0809 * (normalized) fppronouns
+ +      -1.9448 * (normalized) sppronouns
+ +      -0.5859 * (normalized) tppronouns
+ +       0.3917 * (normalized) coordconjs
+ +      -1.6653 * (normalized) ptverbs
+ +       0.569  * (normalized) ftverbs
+ +       4.7895 * (normalized) commas
+ +      -0.0637 * (normalized) colons
+ +      -5.7832 * (normalized) dashes
+ +      -4.4723 * (normalized) parentheses
+ +      -5.5913 * (normalized) ellipses
+ +      -0.8235 * (normalized) cmnnouns
+ +      -3.0508 * (normalized) propnouns
+ +       0.0817 * (normalized) adverbs
+ +       0.4136 * (normalized) whwords
+ +       0.0071 * (normalized) slang
+ +       1.9701 * (normalized) uppercase
+ +      -0.1672 * (normalized) avgsentence
+ +       0.4612 * (normalized) avgtoken
+ +      -0.1278 * (normalized) numsentence
+ +       0.3574
+
+Number of kernel evaluations: 174208 (67.8% cached)
+
+Classifier for classes: britneyspears, rihanna
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.625  * (normalized) fppronouns
+ +      -1.801  * (normalized) sppronouns
+ +       0.1412 * (normalized) tppronouns
+ +       0.1804 * (normalized) coordconjs
+ +      -1.0634 * (normalized) ptverbs
+ +      -0.5    * (normalized) ftverbs
+ +       0.907  * (normalized) commas
+ +       2.2578 * (normalized) colons
+ +      -7.9216 * (normalized) dashes
+ +      -4.105  * (normalized) parentheses
+ +      -0.1493 * (normalized) ellipses
+ +       0.5575 * (normalized) cmnnouns
+ +      -2.6651 * (normalized) propnouns
+ +       0.1035 * (normalized) adverbs
+ +       0.2837 * (normalized) whwords
+ +       1.935  * (normalized) slang
+ +       2.7115 * (normalized) uppercase
+ +      -0.9855 * (normalized) avgsentence
+ +       0.2354 * (normalized) avgtoken
+ +      -2.9394 * (normalized) numsentence
+ +       1.2268
+
+Number of kernel evaluations: 636929 (71.981% cached)
+
+Classifier for classes: britneyspears, taylorswift
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         3.3981 * (normalized) fppronouns
+ +      -2.6293 * (normalized) sppronouns
+ +      -0.7391 * (normalized) tppronouns
+ +       0.8259 * (normalized) coordconjs
+ +       1.1815 * (normalized) ptverbs
+ +      -1.5462 * (normalized) ftverbs
+ +       2.2485 * (normalized) commas
+ +      -0.0179 * (normalized) colons
+ +      -4.6281 * (normalized) dashes
+ +      -0.3387 * (normalized) parentheses
+ +      -0.4357 * (normalized) ellipses
+ +      -3.371  * (normalized) cmnnouns
+ +      -3.0093 * (normalized) propnouns
+ +       1.2867 * (normalized) adverbs
+ +       0.5876 * (normalized) whwords
+ +      -2.9331 * (normalized) slang
+ +      -3.4874 * (normalized) uppercase
+ +       0.0692 * (normalized) avgsentence
+ +       1.3547 * (normalized) avgtoken
+ +       0.0066 * (normalized) numsentence
+ +       0.6351
+
+Number of kernel evaluations: 137229 (66.075% cached)
+
+Classifier for classes: justinbieber, katyperry
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         1.0517 * (normalized) fppronouns
+ +      -0.2983 * (normalized) sppronouns
+ +       0.0461 * (normalized) tppronouns
+ +      -1.0561 * (normalized) coordconjs
+ +      -0.2964 * (normalized) ptverbs
+ +      -1.4528 * (normalized) ftverbs
+ +       5.3458 * (normalized) commas
+ +       3.5403 * (normalized) colons
+ +      -2.9872 * (normalized) dashes
+ +      -5.8311 * (normalized) parentheses
+ +       4      * (normalized) ellipses
+ +       1.3315 * (normalized) cmnnouns
+ +       2.7872 * (normalized) propnouns
+ +      -0.7008 * (normalized) adverbs
+ +      -0.481  * (normalized) whwords
+ +       0.0363 * (normalized) slang
+ +       1.3563 * (normalized) uppercase
+ +      -0.1255 * (normalized) avgsentence
+ +      -0.2299 * (normalized) avgtoken
+ +       1.4511 * (normalized) numsentence
+ -       1.0479
+
+Number of kernel evaluations: 1248861 (70.276% cached)
+
+Classifier for classes: justinbieber, ladygaga
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.4677 * (normalized) fppronouns
+ +      -0.2175 * (normalized) sppronouns
+ +      -0.3647 * (normalized) tppronouns
+ +      -0.3005 * (normalized) coordconjs
+ +      -0.2102 * (normalized) ptverbs
+ +      -0.3298 * (normalized) ftverbs
+ +       7.6667 * (normalized) commas
+ +      -0.1437 * (normalized) colons
+ +      -0.4534 * (normalized) dashes
+ +      -0.8598 * (normalized) parentheses
+ +      -2.25   * (normalized) ellipses
+ +       0.2247 * (normalized) cmnnouns
+ +       1.0056 * (normalized) propnouns
+ +      -0.0533 * (normalized) adverbs
+ +      -0.1417 * (normalized) whwords
+ +      -0.0047 * (normalized) slang
+ +      -0.4132 * (normalized) uppercase
+ +       0.1325 * (normalized) avgsentence
+ +      -0.5947 * (normalized) avgtoken
+ +       0.3156 * (normalized) numsentence
+ -       1.009 
+
+Number of kernel evaluations: 978494 (76.123% cached)
+
+Classifier for classes: justinbieber, rihanna
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.2075 * (normalized) fppronouns
+ +      -2.3745 * (normalized) sppronouns
+ +      -0.116  * (normalized) tppronouns
+ +      -2.4783 * (normalized) coordconjs
+ +      -1.5449 * (normalized) ptverbs
+ +      -3.3715 * (normalized) ftverbs
+ +       4.0846 * (normalized) commas
+ +       3.7022 * (normalized) colons
+ +      -5.3884 * (normalized) dashes
+ +      -8.9982 * (normalized) parentheses
+ +       0.2024 * (normalized) ellipses
+ +       3.156  * (normalized) cmnnouns
+ +       3.2135 * (normalized) propnouns
+ +       0.2044 * (normalized) adverbs
+ +       0.6047 * (normalized) whwords
+ +       4.36   * (normalized) slang
+ +      -2.2095 * (normalized) uppercase
+ +      -2.8236 * (normalized) avgsentence
+ +      -2.0272 * (normalized) avgtoken
+ +      -4.7564 * (normalized) numsentence
+ +       0.7116
+
+Number of kernel evaluations: 831657 (66.843% cached)
+
+Classifier for classes: justinbieber, taylorswift
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         1.1268 * (normalized) fppronouns
+ +      -0.9795 * (normalized) sppronouns
+ +      -1.0083 * (normalized) tppronouns
+ +      -0.5863 * (normalized) coordconjs
+ +       0.8631 * (normalized) ptverbs
+ +      -1.923  * (normalized) ftverbs
+ +       4.6612 * (normalized) commas
+ +      -1.022  * (normalized) colons
+ +      -0.3889 * (normalized) dashes
+ +       2.4682 * (normalized) parentheses
+ +       0.2943 * (normalized) ellipses
+ +      -1.1892 * (normalized) cmnnouns
+ +       3.6079 * (normalized) propnouns
+ +       0.5322 * (normalized) adverbs
+ +      -0.1992 * (normalized) whwords
+ +      -1.7763 * (normalized) slang
+ +      -4.8742 * (normalized) uppercase
+ +       0.9617 * (normalized) avgsentence
+ +      -1.4152 * (normalized) avgtoken
+ +       2.1539 * (normalized) numsentence
+ -       0.9631
+
+Number of kernel evaluations: 534447 (71.353% cached)
+
+Classifier for classes: katyperry, ladygaga
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.4098 * (normalized) fppronouns
+ +      -0.0195 * (normalized) sppronouns
+ +      -0.317  * (normalized) tppronouns
+ +      -0.0528 * (normalized) coordconjs
+ +      -0.0261 * (normalized) ptverbs
+ +       0.0555 * (normalized) ftverbs
+ +       2.0239 * (normalized) commas
+ +      -0.7562 * (normalized) colons
+ +       0.8727 * (normalized) dashes
+ +      -0.7506 * (normalized) parentheses
+ +      -2.0277 * (normalized) ellipses
+ +      -0.1514 * (normalized) cmnnouns
+ +       0.5405 * (normalized) propnouns
+ +      -0.0064 * (normalized) adverbs
+ +      -0.1216 * (normalized) whwords
+ +      -0.2208 * (normalized) slang
+ +      -0.826  * (normalized) uppercase
+ +       0.164  * (normalized) avgsentence
+ +      -0.1146 * (normalized) avgtoken
+ +       0.4095 * (normalized) numsentence
+ -       1.0161
+
+Number of kernel evaluations: 544571 (78.794% cached)
+
+Classifier for classes: katyperry, rihanna
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.9152 * (normalized) fppronouns
+ +      -1.6683 * (normalized) sppronouns
+ +      -0.5233 * (normalized) tppronouns
+ +      -1.743  * (normalized) coordconjs
+ +      -1.1424 * (normalized) ptverbs
+ +      -2.5313 * (normalized) ftverbs
+ +      -0.2851 * (normalized) commas
+ +       1.4272 * (normalized) colons
+ +      -0.339  * (normalized) dashes
+ +      -1.887  * (normalized) parentheses
+ +      -2.9817 * (normalized) ellipses
+ +       3.3348 * (normalized) cmnnouns
+ +       0.725  * (normalized) propnouns
+ +       0.8724 * (normalized) adverbs
+ +       0.5076 * (normalized) whwords
+ +       3.5049 * (normalized) slang
+ +      -3.4336 * (normalized) uppercase
+ +      -2.673  * (normalized) avgsentence
+ +      -1.3261 * (normalized) avgtoken
+ +      -7.0261 * (normalized) numsentence
+ +       1.2066
+
+Number of kernel evaluations: 1152727 (68.148% cached)
+
+Classifier for classes: katyperry, taylorswift
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.344  * (normalized) fppronouns
+ +      -0.3725 * (normalized) sppronouns
+ +      -0.7489 * (normalized) tppronouns
+ +       0.473  * (normalized) coordconjs
+ +       1.267  * (normalized) ptverbs
+ +      -1.2745 * (normalized) ftverbs
+ +       0.7639 * (normalized) commas
+ +      -1.3636 * (normalized) colons
+ +       2.0577 * (normalized) dashes
+ +       2.0947 * (normalized) parentheses
+ +      -1.5482 * (normalized) ellipses
+ +      -2.6859 * (normalized) cmnnouns
+ +       2.0328 * (normalized) propnouns
+ +       0.7826 * (normalized) adverbs
+ +      -0.0222 * (normalized) whwords
+ +      -2.1543 * (normalized) slang
+ +      -6.0768 * (normalized) uppercase
+ +       1.6538 * (normalized) avgsentence
+ +      -0.2008 * (normalized) avgtoken
+ +       2.825  * (normalized) numsentence
+ -       0.9047
+
+Number of kernel evaluations: 462149 (75.52% cached)
+
+Classifier for classes: ladygaga, rihanna
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -1.4127 * (normalized) fppronouns
+ +      -0.6011 * (normalized) sppronouns
+ +       0.562  * (normalized) tppronouns
+ +      -0.4503 * (normalized) coordconjs
+ +      -0.5711 * (normalized) ptverbs
+ +      -1.7919 * (normalized) ftverbs
+ +      -2.6921 * (normalized) commas
+ +       1.8352 * (normalized) colons
+ +      -0.6179 * (normalized) dashes
+ +       0.5328 * (normalized) parentheses
+ +       2.7438 * (normalized) ellipses
+ +       1.5601 * (normalized) cmnnouns
+ +      -0.6222 * (normalized) propnouns
+ +       0.4467 * (normalized) adverbs
+ +       0.4262 * (normalized) whwords
+ +       2.0806 * (normalized) slang
+ +       1.1461 * (normalized) uppercase
+ +      -1.3655 * (normalized) avgsentence
+ +      -0.7218 * (normalized) avgtoken
+ +      -3.8199 * (normalized) numsentence
+ +       1.4016
+
+Number of kernel evaluations: 616947 (71.534% cached)
+
+Classifier for classes: ladygaga, taylorswift
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.4214 * (normalized) fppronouns
+ +      -0.3587 * (normalized) sppronouns
+ +      -0.2103 * (normalized) tppronouns
+ +       0.0659 * (normalized) coordconjs
+ +       2.1575 * (normalized) ptverbs
+ +      -2.0859 * (normalized) ftverbs
+ +      -3.3553 * (normalized) commas
+ +      -1.3037 * (normalized) colons
+ +       1.064  * (normalized) dashes
+ +       3.7273 * (normalized) parentheses
+ +       3.6799 * (normalized) ellipses
+ +      -3.9933 * (normalized) cmnnouns
+ +       0.2256 * (normalized) propnouns
+ +       1.3179 * (normalized) adverbs
+ +      -0.2161 * (normalized) whwords
+ +      -4.5583 * (normalized) slang
+ +      -5.7048 * (normalized) uppercase
+ +       0.6121 * (normalized) avgsentence
+ +       0.7444 * (normalized) avgtoken
+ +       1.5208 * (normalized) numsentence
+ +       0.8652
+
+Number of kernel evaluations: 137515 (69.074% cached)
+
+Classifier for classes: rihanna, taylorswift
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         1.2743 * (normalized) fppronouns
+ +       0.4705 * (normalized) sppronouns
+ +      -0.6988 * (normalized) tppronouns
+ +       1.0727 * (normalized) coordconjs
+ +       2.5325 * (normalized) ptverbs
+ +       0.1236 * (normalized) ftverbs
+ +       0.6873 * (normalized) commas
+ +      -1.8724 * (normalized) colons
+ +       1.059  * (normalized) dashes
+ +       4.0535 * (normalized) parentheses
+ +       0.0098 * (normalized) ellipses
+ +      -3.3116 * (normalized) cmnnouns
+ +       1.4727 * (normalized) propnouns
+ +       0.5696 * (normalized) adverbs
+ +      -0.0331 * (normalized) whwords
+ +      -4.214  * (normalized) slang
+ +      -8.798  * (normalized) uppercase
+ +       2.341  * (normalized) avgsentence
+ +      -0.0204 * (normalized) avgtoken
+ +       5.6018 * (normalized) numsentence
+ -       1.1867
+
+Number of kernel evaluations: 463583 (69.407% cached)
+
+
+
+Time taken to build model: 5.8 seconds
+Time taken to test model on training data: 0.22 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        4888               39.6914 %
+Incorrectly Classified Instances      7427               60.3086 %
+Kappa statistic                          0.2094
+Mean absolute error                      0.2506
+Root mean squared error                  0.3529
+Relative absolute error                 94.6837 %
+Root relative squared error             96.9935 %
+Total Number of Instances            12315     
+
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f   <-- classified as
+  261  346  240    3  242   18 |    a = britneyspears
+   48 1352  431    6 1147   17 |    b = justinbieber
+   94  653 1127    2 1136   31 |    c = katyperry
+   64  248  250   23  383   44 |    d = ladygaga
+   60  446  526    8 2037   22 |    e = rihanna
+   55  363  249    4  291   88 |    f = taylorswift
+
+
+=== Error on test data ===
+
+Correctly Classified Instances        4888               39.6914 %
+Incorrectly Classified Instances      7427               60.3086 %
+Kappa statistic                          0.2094
+Mean absolute error                      0.2506
+Root mean squared error                  0.3529
+Relative absolute error                 94.6837 %
+Root relative squared error             96.9935 %
+Total Number of Instances            12315     
+
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f   <-- classified as
+  261  346  240    3  242   18 |    a = britneyspears
+   48 1352  431    6 1147   17 |    b = justinbieber
+   94  653 1127    2 1136   31 |    c = katyperry
+   64  248  250   23  383   44 |    d = ladygaga
+   60  446  526    8 2037   22 |    e = rihanna
+   55  363  249    4  291   88 |    f = taylorswift
+

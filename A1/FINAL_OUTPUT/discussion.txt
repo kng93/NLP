@@ -1,0 +1,136 @@
+----- SECTION 3.1 -----
+Command Line (twt creation):
+        - python twtt.py '/u/cs401/tweets/BarackObama' 'barackobama.twt'
+        - python twtt.py '/u/cs401/tweets/StephenAtHome' 'stephencolbert.twt'
+        - python twtt.py '/u/cs401/tweets/aplusk' 'ashtonkutcher.twt'
+        - python twtt.py '/u/cs401/tweets/KimKardashian' 'kimkardashian.twt'
+        - python twtt.py '/u/cs401/tweets/neiltyson' 'neiltyson.twt'
+        - python twtt.py '/u/cs401/tweets/shakira' 'shakira.twt'
+Command Line (buildarff): python buildarff.py 'barackobama.twt' 'stephencolbert.twt' 'ashtonkutcher.twt' 'kimkardashian.twt' 'neiltyson.twt' 'shakira.twt' '3.1.arff'
+
+Command Line (SVM):	java -cp '/u/cs401/WEKA/weka.jar' weka.classifiers.functions.SMO -t 3.1.arff -x 10
+Command Line (Bayes):	java -cp '/u/cs401/WEKA/weka.jar' weka.classifiers.bayes.NaiveBayes -t 3.1.arff -x 10
+Command Line (Tree):	java -cp '/u/cs401/WEKA/weka.jar' weka.classifiers.trees.J48 -t 3.1.arff -x 10
+
+The results after running WEKA on the three classfiers (SVM, Naive Bayes, Decision Tree) were relatively close; within 5% of each other in terms of correctness. I have listed the percentage of correctly classified instances below:
+
+Training Data Correctly classified (SMO):	50.5369 %
+Training Data Correctly classified (Bayes):	45.2805 %
+Training Data Correctly classified (Tree):	78.1783 %
+
+Cross-Validation Correctly classified (SMO):	50.0638 %
+Cross-Validation Correctly classified (Bayes):	44.9651 %
+Cross-Validation Correctly classified (Tree):	49.4706 %
+
+By the data, we can see that the best classification algorithm is SVM as it yields the most correctly classified results during cross-validation. We note that there is a vast difference between the training data and cross-validation classificaiton for the decision tree. This may indicate over-fitting as it is not properly generalizing.
+
+
+----- SECTION 3.2 -----
+Command Line (twt creation):
+        - python twtt.py '/u/cs401/tweets/britneyspears' 'britneyspears.twt'
+        - python twtt.py '/u/cs401/tweets/justinbieber' 'justinbieber.twt'
+        - python twtt.py '/u/cs401/tweets/katyperry' 'katyperry.twt'
+        - python twtt.py '/u/cs401/tweets/ladygaga' 'ladygaga.twt'
+        - python twtt.py '/u/cs401/tweets/rihanna' 'rihanna.twt'
+        - python twtt.py '/u/cs401/tweets/taylorswift13' 'taylorswift.twt'
+Command Line (buildarff): python buildarff.py 'britneyspears.twt' 'justinbieber.twt' 'katyperry.twt' 'ladygaga.twt' 'rihanna.twt' 'taylorswift.twt' '3.2.arff'
+
+Command Line (x-validation):	java -cp '/u/cs401/WEKA/weka.jar' weka.classifiers.functions.SMO -t 3.2.arff -x 10
+Command Line (training);	java -cp '/u/cs401/WEKA/weka.jar' weka.classifiers.functions.SMO -t 3.2.arff -T 3.2.arff
+
+Running the cross-validation command yielded a result of:
+Training Data Correctly classified:	39.6914 %
+Cross-Validation Correctly classified:	39.1068 %
+
+By the data, we see that the classification accuracy has greatly decreased as compared to Section 3.1. This is not surprising as we are comparing twits that are much more similar (all under the same category of 'pop'). 
+
+Running the training set as the test set yields:
+Training Data Correctly classified:	39.6914 %
+Cross-Validation Correctly classified:	39.6914 %
+
+We can see here that the result on the training data matches exactly with the result from the cross-validation. This is to be expected as we used our training data as our test data.
+
+
+----- SECTION 3.3 -----
+Command Line (twt creation):
+	- python twtt.py '/u/cs401/tweets/CBCNews' 'cbc.twt'
+	- python twtt.py '/u/cs401/tweets/cnn' 'cnn.twt'
+	- python twtt.py '/u/cs401/tweets/torontostarnews' 'torontostar.twt'
+	- python twtt.py '/u/cs401/tweets/Reuters' 'reuters.twt'
+	- python twtt.py '/u/cs401/tweets/nytimes' 'nytimes.twt'
+	- python twtt.py '/u/cs401/tweets/TheOnion' 'onion.twt'
+Command Line (buildarff): python buildarff.py 'cbc.twt' 'cnn.twt' 'torontostar.twt' 'reuters.twt' 'nytimes.twt' 'onion.twt' '3.3.arff'
+
+Command Line (x-validation):	java -cp '/u/cs401/WEKA/weka.jar' weka.classifiers.functions.SMO -t 3.3.arff -x 10
+
+Running the cross-validation command yielded a result of:
+Training Data Correctly classified:	39.315  %
+Cross-Validation Correctly classified:	39.0983 %
+
+We can see that they are approximately as difficult to distinguish from one another in comparison to pop stars (albeit slightly more difficult with a higher error rate of 0.5931%).
+
+Precision of CBC:		2043 / 5855 = 	0.348932
+Precision of CNN:		384 / 1045 = 	0.367464
+Precision of Toronto Star:	981 / 2983 =	0.328864
+Precision of Reuters:		819 / 2315 = 	0.353780
+Precision of New York Times:	1657 / 3995 = 	0.414768
+Precision of The Onion:		1513 / 3026 = 	0.5
+
+Recall of CBC:			2043 / 3160 =	0.646519
+Recall of CNN:			384 / 3175 = 	0.120945
+Recall of Toronto Star:		981 / 3134 = 	0.313018
+Recall of Reuters:		819 / 3163 = 	0.258931
+Recall of New York Times:	1657 / 3118 = 	0.531430
+Recall of The Onion:		1513 / 3169 = 	0.477438
+
+The numbers indicate that 'The Onion' is the most distinctive news source, followed closely by 'New York Times' (in that 'New York Times' has a slightly higher recall rate, though a lower precision rate). In terms of precision, the rest of the news sources have similar rates. However, we see a striking difference in the recall rate, which puts 'CNN' as the least distinctive.
+
+
+----- SECTION 3.4 -----
+Command Line (buildarff full): python buildarff.py 'pop:britneyspears.twt+justinbieber.twt+katyperry.twt+ladygaga.twt+rihanna.twt+taylorswift.twt' 'news:cbc.twt+cnn.twt+torontostar.twt+reuters.twt+nytimes.twt+onion.twt' 3.4.arff
+Command Line (buildarff half): python -500 buildarff.py 'pop:britneyspears.twt+justinbieber.twt+katyperry.twt+ladygaga.twt+rihanna.twt+taylorswift.twt' 'news:cbc.twt+cnn.twt+torontostar.twt+reuters.twt+nytimes.twt+onion.twt' 3.4_half.arff
+
+Command Line (x-validation): java -cp '/u/cs401/WEKA/weka.jar' weka.classifiers.functions.SMO -t 3.4.arff -x 10
+Command Line (half data): java -cp '/u/cs401/WEKA/weka.jar' weka.classifiers.functions.SMO -t 3.4half.arff -x 10
+
+Running the cross-validation command yielded a result of:
+Training Data Correctly classified:	86.2458 %
+Cross-Validation Correctly classified:	86.1081 %
+
+As we can see, there is a vast improvement in terms of accuracy. This is due to the difference in speech pop stars use in comparison to news sources. If we wanted to sort between general categories of tweets, this would be a valid search. However, this is not an accurate representation of the robustness of the algorithm as it does not compare against similar speech-types (and as we saw earlier, it does not yield a very good result when comparing within a category).
+
+Running the cross-validation command over half (500) the data yielded a result of:
+Training Data Correctly classified:     85.6    %
+Cross-Validation Correctly classified:  85.3833 %
+
+There is a slight difference in performance (on both the training data and the cross-validation) by approximately 1%.
+
+
+Running the cross-validation command over 30 tweets yielded a result of:
+Training Data Correctly classified:     84.4444 %
+Cross-Validation Correctly classified:  82.7778 %
+
+Running the cross-validation command over 800 tweets yielded a result of:
+Training Data Correctly classified:     85.7813 %
+Cross-Validation Correctly classified:  85.625  %
+
+Running over various limitations of tweets, we see there is a general trend towards a more accurate result as we increase the number of tweets used to train. By this, we can assume that more twitter data would certainly increase performance. On the other hand, we do not see vast improvements over the variation between 30 - 800 tweets. This implies that a large amount of data would be required to greatly improve performance.
+
+
+----- SECTION 3.5 -----
+Command Line (Section 3.1): sh /u/cs401/WEKA/infogain.sh 3.1.arff
+Command Line (Section 3.2): sh /u/cs401/WEKA/infogain.sh 3.2.arff
+Command Line (Section 3.3): sh /u/cs401/WEKA/infogain.sh 3.3.arff
+Command Line (Section 3.3): sh /u/cs401/WEKA/infogain.sh 3.4.arff
+
+The feature which seemed most useful in all tasks was the average sentence length (ranking as 1st, 4th, 2nd, 2nd, respectively). There are certain notable features:
+
+- Slang: 
+	This was the most useful feature when comparing section 3.3 (news). However, it was relatively useful for comparing in section 3.4 (news vs. pop). This is expected as it is likely for pop celebrities to use slang often in their tweets, while news stations will have few, if any at all.
+- Upper Case: 
+	This was high for both section 3.2 (pop) and 3.3 (news), while low on section 3.1 (celebrities) and 3.4 (news vs. pop). It is likely to be high for section 3.2 (pop) due to the general exclamatory speech of certain pop stars in comparison to others, and section 3.3 (news) due to the attention-catching propensity of some news stations compared to others. Due to the variation between pop stars and news stations to use upper case letters, it is not suprising that this feature is not particularly useful in seciton 3.4 (comparing pop vs. news).
+- First-Person Pronouns:
+	This was the highest-ranking feature in section 3.4 (pop vs. news). This is likely due to the nature of speech between pop stars and news stations; pop stars are more likely to speak in first-person as they speak of themselves, while news stations are less likely to as they speak of events.
+- Comma:
+	The data shows commas to be high-ranking for section 3.1 (celebrities) and section 3.2 (pop), while lower for section 3.3 (news) and 3.4 (news vs. pop). This may be due to the fact that 3.1 and 3.2 are more focused on individuals who have different speech styles.
+

@@ -1,0 +1,79 @@
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: pop, news
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -9.0989 * (normalized) fppronouns
+ +      -3.8059 * (normalized) sppronouns
+ +      -1.4246 * (normalized) tppronouns
+ +      -1.5625 * (normalized) coordconjs
+ +      -0.2267 * (normalized) ptverbs
+ +      -0.0984 * (normalized) ftverbs
+ +      -0.1229 * (normalized) commas
+ +       2.9896 * (normalized) colons
+ +      -3.279  * (normalized) dashes
+ +      -2.9927 * (normalized) parentheses
+ +      -5.1756 * (normalized) ellipses
+ +      -0.2319 * (normalized) cmnnouns
+ +       1.8333 * (normalized) propnouns
+ +      -0.9363 * (normalized) adverbs
+ +      -0.4894 * (normalized) whwords
+ +      -5.2062 * (normalized) slang
+ +      -5.9125 * (normalized) uppercase
+ +       1.9825 * (normalized) avgsentence
+ +       3.133  * (normalized) avgtoken
+ +      -2.915  * (normalized) numsentence
+ -       0.0893
+
+Number of kernel evaluations: 903671 (70.271% cached)
+
+
+
+Time taken to build model: 0.85 seconds
+Time taken to test model on training data: 0.14 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        5162               86.0333 %
+Incorrectly Classified Instances       838               13.9667 %
+Kappa statistic                          0.7207
+Mean absolute error                      0.1397
+Root mean squared error                  0.3737
+Relative absolute error                 27.9333 %
+Root relative squared error             74.744  %
+Total Number of Instances             6000     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2389  611 |    a = pop
+  227 2773 |    b = news
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        5145               85.75   %
+Incorrectly Classified Instances       855               14.25   %
+Kappa statistic                          0.715 
+Mean absolute error                      0.1425
+Root mean squared error                  0.3775
+Relative absolute error                 28.5    %
+Root relative squared error             75.4983 %
+Total Number of Instances             6000     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2374  626 |    a = pop
+  229 2771 |    b = news
+
