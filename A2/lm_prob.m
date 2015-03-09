@@ -44,11 +44,11 @@ function logProb = lm_prob(sentence, LM, type, delta, vocabSize)
     return;
   end
 
-  words = strsplit(sentence);
+  words = strsplit(' ', sentence);
  
   % Initialize first word to be 'null' (consistent with lm_train); should always be followd by SENTSTART 
-  prevWord = 'null'
-  total_prob = 1;
+  prevWord = '';
+  total_prob = 0;
 
   % Calculating the MLE estimate
   for w=1:length(words)
@@ -57,20 +57,29 @@ function logProb = lm_prob(sentence, LM, type, delta, vocabSize)
  
     % If word isn't in training for uni set, leave logProb = -inf (because won't be in bi set)
     if isfield(LM.uni, word)
-      uni_wcount = LM.uni.(word) + delta; % If not smooth, delta = 0 so has no effect
-      bi_wcount = 0 + (delta * vocabSize); % Default until found
-      % Get the bi count
+      uni_wcount = LM.uni.(word) + (delta * vocabSize); % If not smooth, delta = 0 so has no effect
+      bi_wcount = 0 + delta; % Default until found
+      % Get the bi count 
       if isfield(LM.bi, prevWord) && isfield(LM.bi.(prevWord), word)
-        bi_wcount = LM.bi.(prevWord).(word) + (delta * vocabSize);
+        bi_wcount = LM.bi.(prevWord).(word) + delta;
       end
-         
+      
       % Get the probability for current word
-      prob = bi_wcount / uni_wcount;
+      if (w == 1)
+        prob = 0; % First word in sentence always SENTSTART; no probability to add
+      else   
+        prob = log2(bi_wcount / uni_wcount);
+      end
+
     end
-    total_prob = total_prob * prob;
+    total_prob = total_prob + prob;
+
+    % Once set to -Inf, don't bother going through the rest of the sentence
+    if total_prob == -Inf
+      break;
+    end
+    prevWord = word;
   end
-  logProb = log2(total_prob);
-
-  % TODO: Test!!!
-
+  logProb = total_prob;
+  
 return

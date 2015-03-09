@@ -1,0 +1,26 @@
+Perplexity for MLE
+English: 	13.0771
+French:		12.7614
+
+Perplexity for delta = 1
+English:	131.5401
+French:		150.4838
+
+Perplexity for delta = 0.5
+English: 	97.8490
+French:		108.8324
+
+Perplexity for delta = 0.1
+English:	58.0143
+French:		60.9763
+
+Perplexity for delta = 0.01
+English:	39.8280
+French:		38.7353
+
+------------------------------
+We can see that the perplexity for MLE is much lower than that of perplexity. This is to be expected as MLE does not give a probability to any words that have not been seen. In turn, this reduces the choices for each word, reducing the overall entropy, which results in the reduction of perplexity.
+
+Furthermore, we see the perplexity decrease as delta decreases. We can understand this phenomenon as the decreasing delta allows for seen words to have a relatively greater probability (as the delta decreases, the probability of seen words increases) than unseen words. This also reduces the entropy as there is more chance of the previously seen word (reducing ambiguity).
+
+As we can think of perplexity as a branching factor, it is easily seen why +delta perplexity values are much higher as they allow for more "branches".  

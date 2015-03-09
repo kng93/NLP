@@ -26,8 +26,6 @@ function LM = lm_train(dataDir, language, fn_LM)
 % 
 % Template (c) 2011 Frank Rudzicz
 
-% TODO: Clean up
-
 global CSC401_A2_DEFNS
 
 LM=struct();
@@ -42,13 +40,12 @@ DD = dir( [ dataDir, filesep, '*', language] );
 disp([ dataDir, filesep, '.*', language] );
 
 for iFile=1:length(DD)
-
   lines = textread([dataDir, filesep, DD(iFile).name], '%s','delimiter','\n');
 
   for l=1:length(lines)
 
     processedLine =  preprocess(lines{l}, language);
-    words = strsplit( processedLine );
+    words = strsplit( ' ', processedLine );
     prevWord = 'null'; % Every new line, the previous word is initialized again
 
     % Iterate over the words
@@ -74,10 +71,9 @@ for iFile=1:length(DD)
         else
           LM.bi.(prevWord).(word) = 1;
         end
+        % Sets the previous word for the bigram
+        prevWord = word;
       end
-
-      % Sets the previous word for the bigram
-      prevWord = word;
     end
   end
 end

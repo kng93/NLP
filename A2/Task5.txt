@@ -1,0 +1,29 @@
+Parameters - numSentences=1000, maxIter=8, delta = 0 (MLE)
+  - Correct Words = 	27
+  - Total Words = 	228 (excludes punctuation)
+  - Proportion = 	0.11842
+
+Parameters - numSentences=10000, maxIter=8, delta = 0 (MLE)
+  - Correct Words = 	25
+  - Total Words = 	228 (excludes punctuation)
+  - Proportion = 	0.10965
+
+Parameters - numSentences=15000, maxIter=8, delta = 0 (MLE)
+  - Correct Words =     28
+  - Total Words =       228 (excludes punctuation)
+  - Proportion =        0.12281
+
+Parameters - numSentences=10000, maxIter=8, delta = 0 (MLE)
+  - Correct Words =     28      
+  - Total Words =       228 (excludes punctuation)
+  - Proportion =        0.12281
+
+-------------------------------------------------------------
+ANALYSIS OF EVALUATION MEASURE
+The biggest issue with our current evaluation measure is with how the "correct" words are counted. We have taken the simple approach of comparing words translated to the words in the correct sentence by their index. This is greatly lacking due to the fact that different languages (French and English included) have different sentence structures, and often add/take away words. This results in a shift of the index, and though a word may be correctly translated, it is not compared to the same word.
+
+-------------------------------------------------------------
+SUMMARY OF FINDINGS
+We can see that the proportion of correct words is quite low. This can be explained in part by the evaluation method (as described in the earlier section). However, there are more factors to consider - such as our limited training set and reduced alignment model (we not only used the simplified assumption of uniform distribution, but have also limited our distribution model for the sake of memory and computation time). As such, it is not a surprise our proportions are very low.
+
+Furthermore, we also see that the proportion does not always increase as we increase the number of sentences. This may be due to the increase in the branching factor, which makes it slightly more difficult for the decoder to choose the correct word.  
