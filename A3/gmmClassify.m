@@ -36,20 +36,15 @@ for iFile=1:length(files)
     all_log = horzcat(all_log, log_L);
   end
 
-  fh = fopen(strcat(char(name), '.lik'), 'w');
+  fh = fopen(strcat('./UNK', char(name), '.lik'), 'w');
   idxs = [1:length(gmms)];
   % Get the top 5 most likely speakers
-  for i=1:5
-    % Get the indices of the maximum value in the array
-    top_idx = find(all_log == max(all_log));
-    top_idx = find(idxs == top_idx(1)); % (1 in rare case there is a double maximum)
-
+  [sVal, sIdx] = sort(all_log, 'descend');
+  maxIdx = sIdx(1:5);
+  for i=1:length(maxIdx)
     % Put names to file 
-    fprintf(fh, '%s\n', gmms(top_idx).name);
-
-    % Get rid of the maximum in the array
-    all_log(top_idx) = [];
-    idxs(top_idx) = [];
+    fprintf(fh, '%s\n', gmms(maxIdx(i)).name);
   end
+
   fclose(fh);
 end

@@ -63,7 +63,6 @@ function gmms = gmmTrain( dir_train, max_iter, epsilon, M )
         [p, log_L] = ComputeLikelihood(data.(DD(iDir).name), theta, M); 
         theta = UpdateParameters(theta, p, data.(DD(iDir).name), M);
 
-        disp(log_L);
         improvement = log_L - prev_L; 
         prev_L = log_L;
         i = i + 1;
@@ -118,7 +117,7 @@ function [p, log_L] = ComputeLikelihood(X, theta, M)
     p.(idx) = p_num ./ p_denom; 
   end
   
-  log_L = sum(reallog(p_denom))
+  log_L = sum(reallog(p_denom));
 end
 
 function theta = UpdateParameters(theta, p, X, M)
@@ -131,13 +130,9 @@ function theta = UpdateParameters(theta, p, X, M)
     sig_num = 0;
     idx = ['m',num2str(m)];
 
-    for i=1:T
-      % Get the numerators for omega, mu, and sigma
-      total = total + p.(idx)(i,:);
-      mu_num = mu_num + (p.(idx)(i,:)*X(i,:));
-      sig_num = sig_num + (p.(idx)(i,:)*((X(i,:) - theta.mu.(idx)).^2));
-      %sig_num = sig_num + (p.(idx)(i,:)*(X(i,:).^2));
-    end
+    total = sum(p.(idx));
+    sig_num = sum(bsxfun(@times, bsxfun(@minus, X, theta.mu.(idx)), p.(idx)).^2); 
+    mu_num = sum(bsxfun(@times, X, p.(idx)));
 
     % Set the new theta
     theta.omega.(idx) = total/T;
