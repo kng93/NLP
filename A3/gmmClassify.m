@@ -36,7 +36,12 @@ for iFile=1:length(files)
     all_log = horzcat(all_log, log_L);
   end
 
-  fh = fopen(strcat('./UNK', char(name), '.lik'), 'w');
+  % Make directory for unknown .lik files
+  if ~exist('UNK', 'dir')
+    mkdir('UNK');
+  end
+
+  fh = fopen(strcat('./UNK/', char(name), '.lik'), 'w');
   idxs = [1:length(gmms)];
   % Get the top 5 most likely speakers
   [sVal, sIdx] = sort(all_log, 'descend');
