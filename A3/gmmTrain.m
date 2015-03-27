@@ -90,34 +90,35 @@ function [p, log_L] = ComputeLikelihood(X, theta, M)
     b_const.(idx) = -(sum(((theta.mu.(idx)).^2)./(2*sigma)) + ((size(X,2)/2)*reallog(2*pi)) + (0.5*(reallog(prod(sigma)))));
   end
 
-  % Iterate over every speech segment
-  for i=1:size(X,1)
-    log_b = [];
+  log_b = [];
+  for m=1:M
+    % Constants
+    idx = ['m',num2str(m)];
+    sigma = theta.sigma.(idx);
+    p.(idx) = [];
+    b_const = -(sum(((theta.mu.(idx)).^2)./(2*sigma)) + ((size(X,2)/2)*reallog(2*pi)) + (0.5*(reallog(prod(sigma)))));
 
-    % Calculate the b for every gmm of the current speech segment
-    for m=1:M
-      idx = ['m',num2str(m)];
-      sigma = theta.sigma.(idx);
-      b_num = -sum((0.5*((X(i,:).^2)./sigma) - ((theta.mu.(idx).*X(i,:))./sigma))); %-(0.5*sum(((X(i,:).^2 - theta.mu.(idx)).^2)./sigma));
-      log_b = vertcat(log_b, b_num+b_const.(idx)); % For speech segment i, list of b varying by m
-    end
-
-    % Get the denominator of p
-    p_denom = 0;
-    for m=1:M
-      p_denom = p_denom + theta.omega.(['m',num2str(m)])*exp(log_b(m,:));
-    end
-
-    % For every gmm, add current speech segment to list in p
-    for m=1:M
-      idx = ['m',num2str(m)];
-      p_num = theta.omega.(idx)*exp(log_b(m,:));
-      p.(idx) = vertcat(p.(idx), p_num./p_denom);
-    end
-
-    % Calculate log_L
-    log_L = log_L + reallog(p_denom);
+    % Calculate log_b
+    div_sigma = bsxfun(@rdivide, X.^2, sigma);
+    mult_mu = bsxfun(@rdivide, bsxfun(@times, X, theta.mu.(idx)), sigma);
+    b_num = -sum(0.5*div_sigma - mult_mu, 2);
+    log_b = horzcat(log_b, b_num+b_const);
   end
+
+  % Get the denominator of the p 
+  p_denom = zeros(size(X,1),1);
+  for m=1:M
+    p_denom = p_denom + theta.omega.(['m',num2str(m)])*exp(log_b(:,m));
+  end
+
+  % Calculate p 
+  for m=1:M
+    idx = ['m',num2str(m)];
+    p_num = theta.omega.(idx)*exp(log_b(:,m));
+    p.(idx) = p_num ./ p_denom; 
+  end
+  
+  log_L = sum(reallog(p_denom))
 end
 
 function theta = UpdateParameters(theta, p, X, M)
