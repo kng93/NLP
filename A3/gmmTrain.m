@@ -86,7 +86,7 @@ function [p, log_L] = ComputeLikelihood(X, theta, M)
     idx = ['m',num2str(m)];
     sigma = theta.sigma.(idx);
     p.(idx) = [];
-    b_const.(idx) = -(sum(((theta.mu.(idx)).^2)./(2*sigma)) + ((size(X,2)/2)*reallog(2*pi)) + (0.5*(reallog(prod(sigma)))));
+    %b_const.(idx) = -(sum(((theta.mu.(idx)).^2)./(2*sigma)) + ((size(X,2)/2)*reallog(2*pi)) + (0.5*(reallog(prod(sigma)))));
   end
 
   log_b = [];
@@ -95,13 +95,13 @@ function [p, log_L] = ComputeLikelihood(X, theta, M)
     idx = ['m',num2str(m)];
     sigma = theta.sigma.(idx);
     p.(idx) = [];
-    b_const = -(sum(((theta.mu.(idx)).^2)./(2*sigma)) + ((size(X,2)/2)*reallog(2*pi)) + (0.5*(reallog(prod(sigma)))));
 
     % Calculate log_b
-    div_sigma = bsxfun(@rdivide, X.^2, sigma);
-    mult_mu = bsxfun(@rdivide, bsxfun(@times, X, theta.mu.(idx)), sigma);
-    b_num = -sum(0.5*div_sigma - mult_mu, 2);
-    log_b = horzcat(log_b, b_num+b_const);
+    part1 = -sum(bsxfun(@rdivide, bsxfun(@minus, X, theta.mu.(idx)).^2, 2*sigma), 2);
+    part2 = -(size(X,2)/2)*reallog(2*pi);
+    part3 = -(1/2)*reallog(prod(sigma));
+    b_num = part1 + part2 + part3;
+    log_b = horzcat(log_b, b_num);
   end
 
   % Get the denominator of the p 
@@ -115,8 +115,8 @@ function [p, log_L] = ComputeLikelihood(X, theta, M)
     idx = ['m',num2str(m)];
     p_num = theta.omega.(idx)*exp(log_b(:,m));
     p.(idx) = p_num ./ p_denom; 
-  end
-  
+end
+ 
   log_L = sum(reallog(p_denom));
 end
 
@@ -131,13 +131,16 @@ function theta = UpdateParameters(theta, p, X, M)
     idx = ['m',num2str(m)];
 
     total = sum(p.(idx));
-    sig_num = sum(bsxfun(@times, bsxfun(@minus, X, theta.mu.(idx)), p.(idx)).^2); 
     mu_num = sum(bsxfun(@times, X, p.(idx)));
+    sig_num = sum(bsxfun(@times, X.^2, p.(idx)));
+    %sig_num = sum(bsxfun(@times, bsxfun(@minus, X, theta.mu.(idx)).^2, p.(idx))); 
+    %mu_num = sum(bsxfun(@times, X, p.(idx)));
 
     % Set the new theta
     theta.omega.(idx) = total/T;
-    theta.sigma.(idx) = (sig_num/total);
     theta.mu.(idx) = mu_num/total;
+    theta.sigma.(idx) = (sig_num/total); - theta.mu.(idx).^2;
+    %theta.mu.(idx) = mu_num/total;
   end
 end
 

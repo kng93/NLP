@@ -4,11 +4,11 @@ gmm_file = 'GMM_Data2';
 M = 8;
 
 
-if (exist(gmm_file) == 2)
-  gmms = importdata(gmm_file);
-else
-  gmms = gmmTrain(trainDir, 30, 0.1, 8);
-end
+%if (exist(gmm_file) == 2)
+%  gmms = importdata(gmm_file);
+%else
+gmms = gmmTrain(trainDir, 30, 0, 8);
+%end
 
 files = dir([ testDir, filesep, '*.mfcc' ]);
 
